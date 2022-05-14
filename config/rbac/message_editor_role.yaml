@@ -1,0 +1,24 @@
+# permissions for end users to edit messages.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: message-editor-role
+rules:
+- apiGroups:
+  - echo.example.com
+  resources:
+  - messages
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - echo.example.com
+  resources:
+  - messages/status
+  verbs:
+  - get

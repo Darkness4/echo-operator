@@ -1,0 +1,6 @@
+apiVersion: echo.example.com/v1alpha1
+kind: Message
+metadata:
+  name: message-sample
+spec:
+  # TODO(user): Add fields here
